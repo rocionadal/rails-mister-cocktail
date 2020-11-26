@@ -19,9 +19,3 @@ ingredients['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
 
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
-Cocktail.create(name: "lemon")
-Cocktail.create(name: "ice")
-Cocktail.create(name: "mint leaves")

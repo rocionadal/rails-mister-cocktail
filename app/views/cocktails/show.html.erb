@@ -2,5 +2,7 @@
 <p><%= @cocktail.ingredients %></p>
 <p><%= @cocktail.doses %></p>
 
+<%= link_to 'Add doses', new_cocktail_dose_path(@cocktail) %>
+
 
 
