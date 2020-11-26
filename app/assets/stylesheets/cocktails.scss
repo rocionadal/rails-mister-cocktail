@@ -12,8 +12,22 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.8;
   width: 18rem;
   height: 18rem;
   margin: 8px 8px;
+  color: white;
+  border: 1px solid black;
+  box-shadow: 1px 1px 4px white;
+}
+
+.card-title > a{
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: #d32d00;
+  }
+}
+
+.fa-star {
+  color: white;
 }

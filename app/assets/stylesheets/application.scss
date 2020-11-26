@@ -16,7 +16,15 @@
 @import "doses";
 @import "ingredients";
 
-
-.container {
-  margin-top: 16px;
+.background {
+  background-image: image_url('background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
 }
+
+// .background {
+//   background-image: image_url('background.jpg');
+// }
