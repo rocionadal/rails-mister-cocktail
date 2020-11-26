@@ -13,10 +13,15 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_list = open(url).read
 ingredients = JSON.parse(ingredients_list)
 
-ingredients.each do |ingredient|
-  Ingredient.create(name: ingredient)
+Ingredient.destroy_all
+
+ingredients['drinks'].each do |ingredient|
+  Ingredient.create(name: ingredient["strIngredient1"])
 end
 
 # Ingredient.create(name: "lemon")
 # Ingredient.create(name: "ice")
 # Ingredient.create(name: "mint leaves")
+Cocktail.create(name: "lemon")
+Cocktail.create(name: "ice")
+Cocktail.create(name: "mint leaves")
