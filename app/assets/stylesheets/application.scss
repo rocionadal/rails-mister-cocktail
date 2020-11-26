@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "cocktails";
+@import "doses";
+@import "ingredients";
+
+
+.container {
+  margin-top: 16px;
+}

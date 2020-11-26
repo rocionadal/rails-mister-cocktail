@@ -1,8 +1,15 @@
-<h1><%= @cocktail.name %></h1>
-<p><%= @cocktail.ingredients %></p>
-<p><%= @cocktail.doses %></p>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><i class="fas fa-cocktail px-3"></i>Cocktails</a>
+  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn-add"%>
+</nav>
+<div class="container">
+  <div class="banner" style="background-image: url('<%= @cocktail.image_url %>');"></div>
+  <h1><%= @cocktail.name %></h1>
+  <p><%= @cocktail[:ingredients] %></p>
+  <p><%= @cocktail[:doses] %></p>
 
-<%= link_to 'Add doses', new_cocktail_dose_path(@cocktail) %>
+  <%= link_to 'Add doses', new_cocktail_dose_path(@cocktail) %>
+</div>
 
 
 

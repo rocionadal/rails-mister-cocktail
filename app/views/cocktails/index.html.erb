@@ -1,23 +1,18 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Cocktails</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+  <a class="navbar-brand"><i class="fas fa-cocktail px-3"></i>Cocktails</a>
+  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn-add"%>
 </nav>
-
-<% @cocktails.each do |cocktail| %>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+<div class="container">
+  <div class="cards d-flex">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card card-body" style="background-image: url('<%= cocktail.image_url %>');">
+        <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+        <p class="card-text">Rating</p>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
 
 
 
-<%= link_to 'Create new Cocktail', new_cocktail_path %>
