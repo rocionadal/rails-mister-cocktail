@@ -1,13 +1,23 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand"><i class="fas fa-cocktail px-3"></i>Cocktails</a>
+  <%= link_to '<i class="fas fa-cocktail px-3"></i> Cocktails'.html_safe, cocktails_path, :class => "btn-return-index"  %>
   <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn-add"%>
 </nav>
-<div class="container">
-  <div class="banner" style="background-image: url('<%= @cocktail.image_url %>');"></div>
-  <h1><%= @cocktail.name %></h1>
-  <p><%= @cocktail[:ingredients] %></p>
-  <p><%= @cocktail[:doses] %></p>
 
+<div class="banner" style="background-image: url('<%= @cocktail.image_url %>');">
+  <h1><%= @cocktail.name %></h1>
+</div>
+
+<div class="container">
+  <div class="d-flex">
+    <div>
+      <h5>Description</h5>
+      <p> <%  %> </p>
+    </div>
+
+  </div>
+  <% @cocktail.doses.each do |dose| %>
+    <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+  <% end %>
   <%= link_to 'Add doses', new_cocktail_dose_path(@cocktail) %>
 </div>
 
