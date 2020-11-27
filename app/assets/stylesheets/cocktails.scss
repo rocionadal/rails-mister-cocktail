@@ -31,3 +31,70 @@
 .fa-star {
   color: white;
 }
+
+.show-card {
+  height: 350px;
+  width: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.cocktail-info {
+  background-color: #010101;
+  padding: 32px;
+  height: 350px;
+  color: white;
+  margin: 40px 40px;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.cocktail-info > a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #d32d00;
+  }
+}
+
+// FORM STYLE
+
+label, h1 {
+  color: white;
+}
+
+.form {
+  margin-top: 40px;
+}
+
+.card1 {
+  width: 50%;
+}
+
+.card2 {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.last {
+  position: absolute;
+  bottom: 10px;
+  right: 68px;
+}
+
+.fa-trash {
+  color: white;
+  padding-left: 6px;
+}
+
+.fa-circle {
+  font-size: 4px;
+  text-align: center;
+  padding-right: 4px;
+}

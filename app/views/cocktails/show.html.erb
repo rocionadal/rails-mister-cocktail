@@ -1,25 +1,27 @@
-<nav class="navbar navbar-light bg-light justify-content-between">
+<nav class="navbar justify-content-between">
   <%= link_to '<i class="fas fa-cocktail px-3"></i> Cocktails'.html_safe, cocktails_path, :class => "btn-return-index"  %>
-  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn-add"%>
+  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn btn-primary"%>
 </nav>
 
-<div class="banner" style="background-image: url('<%= @cocktail.image_url %>');">
-  <h1><%= @cocktail.name %></h1>
-</div>
-
-<div class="container">
-  <div class="d-flex">
-    <div>
-      <h5>Ingredient | Dose </h5>
-      <p> <%  %> </p>
+<div class="background">
+  <div class="container">
+    <div class="d-flex">
+      <div class="show-card" style="background-image: url('<%= @cocktail.image_url %>');"></div>
+      <div class="cocktail-info d-flex">
+        <div class="card1">
+          <h2 class="text-white"> <%= @cocktail.name  %> </h2>
+          <p class="text-white"> <%= @cocktail.description  %> </p>
+        </div>
+        <div class="card2">
+          <h5>Ingredient | Dose </h5>
+          <% @cocktail.doses.each do |dose| %>
+            <p><i class="fas fa-circle"></i><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), :method => :delete %></p>
+          <% end %>
+          <%= link_to 'Add Ingredient & Dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-primary last" %>
+        </div>
+      </div>
     </div>
-
   </div>
-  <% @cocktail.doses.each do |dose| %>
-    <p><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), :method => :delete %></p>
-  <% end %>
-  <%= link_to 'Add Ingredient & Dose', new_cocktail_dose_path(@cocktail) %>
-</di
-
+</div>
 
 

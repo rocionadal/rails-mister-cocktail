@@ -13,7 +13,7 @@
 
 .navbar {
   background-color: black;
-      box-shadow: 0 20px 50px black;
+  box-shadow: 0 20px 50px black;
   height: 70px;
   text-align: center;
 }
@@ -22,20 +22,6 @@
   color: white;
   &:hover {
     color: white;
-    text-decoration: none;
-  }
-}
-
-.btn-add {
-  color: white;
-  border: 1px solid white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-right: 8px;
-
-  &:hover {
-    color: #d32d00;
-    border: 1px solid #d32d00;
     text-decoration: none;
   }
 }
