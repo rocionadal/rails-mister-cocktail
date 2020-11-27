@@ -43,7 +43,7 @@
 }
 
 .cocktail-info {
-  background-color: #010101;
+  background-color: rgb(20, 17, 17);
   padding: 32px;
   height: 350px;
   color: white;
@@ -60,32 +60,12 @@
   }
 }
 
-// FORM STYLE
-
 label, h1 {
   color: white;
 }
 
 .form {
   margin-top: 40px;
-}
-
-.card1 {
-  width: 50%;
-}
-
-.card2 {
-  width: 50%;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.last {
-  position: absolute;
-  bottom: 10px;
-  right: 68px;
 }
 
 .fa-trash {
@@ -98,3 +78,15 @@ label, h1 {
   text-align: center;
   padding-right: 4px;
 }
+
+.info {
+  box-shadow: unset;
+  background-color: rgb(20, 17, 17);
+  border: none;
+}
+
+.last {
+  position: absolute;
+  bottom: 4px;
+}
+

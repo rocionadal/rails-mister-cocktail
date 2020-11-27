@@ -1,6 +1,6 @@
 <nav class="navbar justify-content-between">
   <%= link_to '<i class="fas fa-cocktail px-3"></i> Cocktails'.html_safe, cocktails_path, :class => "btn-return-index"  %>
-  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn btn-primary"%>
+  <%= link_to 'Add a Cocktail', new_cocktail_path, :class => "btn btn-navbar"%>
 </nav>
 
 <div class="background">
@@ -8,16 +8,21 @@
     <div class="d-flex">
       <div class="show-card" style="background-image: url('<%= @cocktail.image_url %>');"></div>
       <div class="cocktail-info d-flex">
-        <div class="card1">
-          <h2 class="text-white"> <%= @cocktail.name  %> </h2>
-          <p class="text-white"> <%= @cocktail.description  %> </p>
+        <div class="card info" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="text-white"> <%= @cocktail.name  %> </h2>
+            <p class="text-white"> <%= @cocktail.description  %> </p>
+            <p class="text-white"> Reviews </p>
+          </div>
         </div>
-        <div class="card2">
-          <h5>Ingredient | Dose </h5>
-          <% @cocktail.doses.each do |dose| %>
-            <p><i class="fas fa-circle"></i><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), :method => :delete %></p>
-          <% end %>
-          <%= link_to 'Add Ingredient & Dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-primary last" %>
+        <div class="card info" style="width: 18rem;">
+          <div class="card-body">
+            <h5>Ingredient - Dose </h5>
+            <% @cocktail.doses.each do |dose| %>
+              <p class="card-text"><i class="fas fa-circle"></i><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), :method => :delete %></p>
+            <% end %>
+            <%= link_to 'Add Ingredient & Dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-grey last card-link" %>
+          </div>
         </div>
       </div>
     </div>

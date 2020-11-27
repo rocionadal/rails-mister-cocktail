@@ -1,24 +1,27 @@
-.btn-primary {
+.btn-navbar {
   background-color: black;
+  border-color: white;
+  border-radius: 4px;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 4px;
+  }
+}
+
+
+.btn-grey {
+  color: white;
+  background-color: rgb(25, 25, 25);
   border-color: white;
   border-radius: 4px;
   &:hover {
     background-color: white;
-    color: black;
+    color: rgb(25, 25, 25);
     border-color: white;
     border-radius: 4px;
   }
 }
 
-// .btn-add {
-//   color: white;
-//   border: 1px solid white;
-//   padding: 4px 8px;
-//   border-radius: 4px;
-//   margin-right: 8px;
-
-//   &:hover {
-//     opacity: 0.6;
-//     text-decoration: none;
-//   }
-// }
