@@ -6,7 +6,7 @@
 <div class="background">
   <div class="container">
     <div class="d-flex">
-      <div class="show-card" style="background-image: url('<%= @cocktail.image_url %>');"></div>
+      <div class="show-card" style="background-image: url('<%= cl_image_path @cocktail.photo.key %>');"></div>
       <div class="cocktail-info d-flex">
         <div class="card info" style="width: 18rem;">
           <div class="card-body">
