@@ -1,0 +1,13 @@
+.form-wrapper {
+  min-height: calc(100vh - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index-wrapper {
+  min-height: calc(100vh - 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
