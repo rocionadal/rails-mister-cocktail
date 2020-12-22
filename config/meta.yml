@@ -1,0 +1,4 @@
+meta_product_name: "Mr Cockatil"
+meta_title: "Find amazing cocktails with their doses and ingredients"
+meta_description: "Mr Cocktail is a web app that allows young people to discover new and unique cocktails."
+meta_image: "cover.png" # should exist in `app/assets/images/`
